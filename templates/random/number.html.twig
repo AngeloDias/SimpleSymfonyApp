@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    Random
+{% endblock %}
+
 {% block body %}
     <h1>Your random number is {{ number }}</h1>
     <a href="{{ path('tell_me_about_you') }}">Blog</a>

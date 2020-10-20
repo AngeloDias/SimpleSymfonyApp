@@ -2,10 +2,9 @@
 
 namespace App\Controller;
 
-use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class TellMeAboutYou extends AbstractController
+class TellMeAboutYouController extends AbstractController
 {
     public function setView()
     {
