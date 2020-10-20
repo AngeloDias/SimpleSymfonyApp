@@ -22,3 +22,7 @@ blog_list:
 blog_show:
   path: /blog/{slug}
   controller: App\Controller\BlogController::show
+
+tell_me_about_you:
+  path: /you
+  controller: App\Controller\TellMeAboutYou::setView
