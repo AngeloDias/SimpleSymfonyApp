@@ -1,0 +1,29 @@
+App\Entity\User:
+  type: entity
+  table: user
+  repositoryClass: App\Repository\UserRepository
+  id:
+    id:
+      column: id
+      type: integer
+      nullable: false
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      column: name
+      type: text
+      nullable: false
+    age:
+      column: age
+      type: integer
+      nullable: false
+    sex:
+      column: sex
+      type: text
+      nullable: true
+    birthDate:
+      column: birth_date
+      type: datetime
+      nullable: false
+  lifecycleCallbacks: {  }

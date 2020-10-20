@@ -11,14 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3a8721-3c01-42e8-a26a-657ba53e3174" name="Default Changelist" comment="Implementing routes settings and twig extends element">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_10_2020_11_40__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_10_2020_11_40__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/doctrine/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TellMeAboutYou.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TellMeAboutYouController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/_blog_head_text.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/_blog_head_text.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/tell_me_about_you.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/tell_me_about_you.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/random/number.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/random/number.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,9 +151,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/doctrine" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="fr.adrienbrault.idea.symfony2plugin.ui.TwigSettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\angelo.santana\PhpstormProjects\SimpleSymfonyApp\config\doctrine" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -170,7 +172,18 @@
       <workItem from="1602793048978" duration="841000" />
       <workItem from="1602793999159" duration="1430000" />
       <workItem from="1602846879422" duration="13424000" />
+      <workItem from="1603205042638" duration="980000" />
+      <workItem from="1603206037396" duration="2008000" />
+      <workItem from="1603211677931" duration="984000" />
     </task>
+    <task id="LOCAL-00001" summary="Inserting head to page and some refactoring">
+      <created>1603193697070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603193697070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,13 +203,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting project" />
+    <MESSAGE value="Inserting head to page and some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserting head to page and some refactoring" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="202" y="2" key="#Plugins" timestamp="1603211712912">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="202" y="2" key="#Plugins/0.0.1218.720@0.0.1218.720" timestamp="1603211712912" />
     <state x="106" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602793859955">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="106" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1304.768@0.0.1304.768" timestamp="1602793859955" />
+    <state x="290" y="97" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603211612157">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="290" y="97" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1218.720@0.0.1218.720" timestamp="1603211612157" />
     <state x="311" y="105" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603192518563">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
@@ -213,14 +235,22 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="153" y="29" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1602794058604" />
-    <state x="661" y="0" width="557" height="720" key="find.popup" timestamp="1602854999268">
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603193700864">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="661" y="0" width="557" height="720" key="find.popup/0.0.1218.720@0.0.1218.720" timestamp="1602854999268" />
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1603193700864" />
+    <state x="661" y="0" width="557" height="720" key="find.popup" timestamp="1603212475250">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="661" y="0" width="557" height="720" key="find.popup/0.0.1218.720@0.0.1218.720" timestamp="1603212475250" />
     <state x="719" y="0" width="585" height="768" key="find.popup/0.0.1304.768@0.0.1304.768" timestamp="1602794336495" />
     <state x="453" y="290" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602793326684">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="453" y="290" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1304.768@0.0.1304.768" timestamp="1602793326684" />
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1603212525942">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1218.720@0.0.1218.720" timestamp="1603212525942" />
   </component>
 </project>
