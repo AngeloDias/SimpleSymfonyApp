@@ -11,10 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3a8721-3c01-42e8-a26a-657ba53e3174" name="Default Changelist" comment="Implementing routes settings and twig extends element">
-      <change afterPath="$PROJECT_DIR$/config/doctrine/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/doctrine/User.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +164,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/doctrine" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="fr.adrienbrault.idea.symfony2plugin.ui.TwigSettingsForm" />
+    <property name="settings.editor.selected.configurable" value="Symfony.ProfilerSettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -174,7 +185,15 @@
       <workItem from="1602846879422" duration="13424000" />
       <workItem from="1603205042638" duration="980000" />
       <workItem from="1603206037396" duration="2008000" />
-      <workItem from="1603211677931" duration="984000" />
+      <workItem from="1603211677931" duration="1264000" />
+      <workItem from="1603285241488" duration="102000" />
+      <workItem from="1603290429031" duration="791000" />
+      <workItem from="1603295730222" duration="23000" />
+      <workItem from="1603295814571" duration="243000" />
+      <workItem from="1603296061281" duration="1000" />
+      <workItem from="1603296187845" duration="180000" />
+      <workItem from="1603296448765" duration="861000" />
+      <workItem from="1603297356678" duration="183000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting head to page and some refactoring">
       <created>1603193697070</created>
@@ -183,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603193697070</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updating doctrine configuration to generate entity">
+      <created>1603212928479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603212928479</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +230,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting project" />
     <MESSAGE value="Inserting head to page and some refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserting head to page and some refactoring" />
+    <MESSAGE value="Updating doctrine configuration to generate entity" />
+    <MESSAGE value="Creating crud of entity User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating crud of entity User" />
   </component>
   <component name="WindowStateProjectService">
     <state x="202" y="2" key="#Plugins" timestamp="1603211712912">
@@ -231,26 +259,27 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="446" y="284" key="NewPhpFileDialog/0.0.1218.720@0.0.1218.720" timestamp="1602857274022" />
-    <state x="153" y="29" key="SettingsEditor" timestamp="1602794058604">
-      <screen x="0" y="0" width="1304" height="768" />
+    <state x="143" y="11" key="SettingsEditor" timestamp="1603290610456">
+      <screen x="0" y="0" width="1218" height="720" />
     </state>
+    <state x="143" y="11" key="SettingsEditor/0.0.1218.720@0.0.1218.720" timestamp="1603290610456" />
     <state x="153" y="29" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1602794058604" />
-    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603193700864">
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603212930414">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1603193700864" />
-    <state x="661" y="0" width="557" height="720" key="find.popup" timestamp="1603212475250">
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1603212930414" />
+    <state x="661" y="0" width="557" height="720" key="find.popup" timestamp="1603290933695">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="661" y="0" width="557" height="720" key="find.popup/0.0.1218.720@0.0.1218.720" timestamp="1603212475250" />
+    <state x="661" y="0" width="557" height="720" key="find.popup/0.0.1218.720@0.0.1218.720" timestamp="1603290933695" />
     <state x="719" y="0" width="585" height="768" key="find.popup/0.0.1304.768@0.0.1304.768" timestamp="1602794336495" />
     <state x="453" y="290" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602793326684">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="453" y="290" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1304.768@0.0.1304.768" timestamp="1602793326684" />
-    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1603212525942">
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1603296304674">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1218.720@0.0.1218.720" timestamp="1603212525942" />
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1218.720@0.0.1218.720" timestamp="1603296304674" />
   </component>
 </project>

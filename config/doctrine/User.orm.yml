@@ -14,10 +14,6 @@ App\Entity\User:
       column: name
       type: text
       nullable: false
-    age:
-      column: age
-      type: integer
-      nullable: false
     sex:
       column: sex
       type: text
