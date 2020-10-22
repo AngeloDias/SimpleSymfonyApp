@@ -11,21 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd3a8721-3c01-42e8-a26a-657ba53e3174" name="Default Changelist" comment="Implementing routes settings and twig extends element">
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/doctrine/User.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +163,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config/doctrine" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Symfony.ProfilerSettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -193,7 +193,8 @@
       <workItem from="1603296061281" duration="1000" />
       <workItem from="1603296187845" duration="180000" />
       <workItem from="1603296448765" duration="861000" />
-      <workItem from="1603297356678" duration="183000" />
+      <workItem from="1603297356678" duration="230000" />
+      <workItem from="1603364668319" duration="3029000" />
     </task>
     <task id="LOCAL-00001" summary="Inserting head to page and some refactoring">
       <created>1603193697070</created>
@@ -209,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603212928479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating crud of entity User">
+      <created>1603297560182</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603297560182</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +251,10 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="106" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1304.768@0.0.1304.768" timestamp="1602793859955" />
+    <state x="415" y="43" key="#com.intellij.ide.util.MemberChooser" timestamp="1603366470706">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="415" y="43" key="#com.intellij.ide.util.MemberChooser/0.0.1218.720@0.0.1218.720" timestamp="1603366470706" />
     <state x="290" y="97" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603211612157">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
@@ -264,10 +276,10 @@
     </state>
     <state x="143" y="11" key="SettingsEditor/0.0.1218.720@0.0.1218.720" timestamp="1603290610456" />
     <state x="153" y="29" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1602794058604" />
-    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603212930414">
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1603297561573">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1603212930414" />
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1603297561573" />
     <state x="661" y="0" width="557" height="720" key="find.popup" timestamp="1603290933695">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
@@ -277,9 +289,9 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="453" y="290" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1304.768@0.0.1304.768" timestamp="1602793326684" />
-    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1603296304674">
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1603372272392">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1218.720@0.0.1218.720" timestamp="1603296304674" />
+    <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1218.720@0.0.1218.720" timestamp="1603372272392" />
   </component>
 </project>
