@@ -27,39 +27,10 @@ tell_me_about_you:
   path: /about_you
   controller: App\Controller\TellMeAboutYouController::setView
 
-user_index:
-  path: /user
-  methods:
-    - GET
-  defaults:
-    _controller: App\Controller\UserController::index
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
 
-user_new:
-  path: /user/new
-  methods:
-    - GET
-    - POST
-  defaults:
-    _controller: App\Controller\UserController::new
-
-user_show:
-  path: /user/{id}
-  methods:
-    - GET
-  defaults:
-    _controller: App\Controller\UserController::show
-
-user_edit:
-  path: /user/{id}/edit
-  methods:
-    - GET
-    - POST
-  defaults:
-    _controller: App\Controller\UserController::edit
-
-user_delete:
-  path: /user/{id}
-  methods:
-    - DELETE
-  defaults:
-    _controller: App\Controller\UserController::delete
+app_logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
