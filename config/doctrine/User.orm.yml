@@ -24,6 +24,10 @@ App\Entity\User:
         fixed: true
         comment: Email do usuario
       nullable: false
+    password:
+      column: password
+      type: string
+      nullable: false
     sex:
       column: sex
       type: text
@@ -31,5 +35,9 @@ App\Entity\User:
     birthDate:
       column: birth_date
       type: datetime
+      nullable: false
+    roles:
+      column: roles
+      type: array
       nullable: false
   lifecycleCallbacks: {  }

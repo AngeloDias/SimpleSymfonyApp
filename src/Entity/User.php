@@ -3,19 +3,27 @@
 namespace App\Entity;
 
 use DateTimeInterface;
+use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-class User implements UserInterface
+// References:
+// https://ourcodeworld.com/articles/read/1057/how-to-implement-your-own-user-authentication-system-in-symfony-4-3-part-1-creating-a-custom-user-class
+// https://symfony.com/doc/current/security/user_provider.html
+class User implements UserInterface, EquatableInterface
 {
     private $id;
 
     private $name;
+
+    private $password;
 
     private $email;
 
     private $sex;
 
     private $birthDate;
+
+    private $roles;
 
     public function getId(): ?int
     {
@@ -72,26 +80,55 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        $roles = $this->roles;
+
+        if (empty($roles)) {
+            $roles[] = 'ROLE_USER';
+        }
+
+        return array_unique($roles);
     }
 
-    public function getPassword()
+    public function getPassword(): string
     {
-        // TODO: Implement getPassword() method.
+        return (string) $this->password;
     }
 
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    // not needed when using the "auto" algorithm in security.yaml
     public function getSalt()
-    {
-        // TODO: Implement getSalt() method.
-    }
+    {}
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        return $this->getEmail();
     }
 
     public function eraseCredentials()
     {
-        // TODO: Implement eraseCredentials() method.
+        // If you store any temporary, sensitive data on the user, clear it here
+    }
+
+    public function isEqualTo(UserInterface $user)
+    {
+        if (!$user instanceof User) {
+            return false;
+        }
+
+        if ($this->getPassword() !== $user->getPassword()) {
+            return false;
+        }
+
+        if ($this->getUsername() !== $user->getUsername()) {
+            return false;
+        }
+
+        return true;
     }
 }
